@@ -16,7 +16,7 @@ class Inventory:
                 return json.loads(data)
             if path.endswith('.xml'):
                 data = xmltodict.parse(file.read())
-                print(data)
+
                 return data['dataset']['record']
 
     @classmethod
