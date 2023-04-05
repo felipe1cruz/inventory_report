@@ -6,5 +6,8 @@ class CsvImporter(Importer):
     @classmethod
     def import_data(path):
         with open(path, 'r') as file:
-            data = csv.DictReader(file)
-            return [row for row in data]
+            if path.endswith('.json'):
+                data = csv.DictReader(file)
+                return [row for row in data]
+            else:
+                raise ValueError('extensão do arquivo inválida')
