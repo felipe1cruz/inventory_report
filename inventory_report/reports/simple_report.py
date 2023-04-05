@@ -46,5 +46,3 @@ class SimpleReport:
             f"Data de validade mais próxima: {cls.validade_proxima(list)}\n"
             f"Empresa com mais produtos: {cls.empresa_produtos(list)}"
         )
-    
-
